@@ -1,21 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import { useState } from "react";
 
 function App() {
+  const [number, setNumber] = useState("");
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+        <input
+          placeholder="number"
+          value={number}
+          onChange={(e) => setNumber(e.target.value)}
+          style={{ padding: 10, fontSize: 16 }}
+        />
         <a
           className="App-link"
-          href="https://reactjs.org"
+          href={`http://wa.me/${number}`}
           target="_blank"
           rel="noopener noreferrer"
+          style={{ marginTop: 20, textDecoration: "none" }}
         >
-          Learn React
+          Chat
         </a>
       </header>
     </div>
