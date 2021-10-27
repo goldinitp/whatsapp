@@ -14,7 +14,7 @@ function App() {
         />
         <a
           className="App-link"
-          href={`http://wa.me/${number}`}
+          href={`http://wa.me/91${number}`}
           target="_blank"
           rel="noopener noreferrer"
           style={{ marginTop: 20, textDecoration: "none" }}
